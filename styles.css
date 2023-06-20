@@ -93,10 +93,18 @@ h1 {
 #total-tasks {
   margin-bottom: 20px;
   font-size: 13px;
-    margin-left: 2px;
-    color: gray;
+  margin-left: 60%;
+  color: gray;
 }
 
 body {
   border-style: double;
+}
+
+button {
+  border-radius: 15%;
+  background-color: #bed4e1;
+  width: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
 }

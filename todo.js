@@ -66,28 +66,6 @@ function showNotification(title) {
     alert(title);
 } 
 
-function handleInputKeyPress (e) {
-    if(e.key == 'Enter'){
-       const title=e.target.value;
-
-       if(!title){
-        showNotification('Task text cannot be Empty');
-        return;
-       }
-
-       const task= {//task is an object
-           title: title,
-           id: Date.now().toString(),// Date.now() will give as a time stamp i.e. the exact time at which it was createed and we can 
-           //use it as id and the toString() will simply convert it into a string which will make the id to be a String
-           completed: false
-        }
-
-        e.target.value=''; //This will just clear the input bar the moment the user presses enter
-        addTask(task);
-    }
-
-}
-
 function handleClickListener (e) {
     const target=e.target;
     
@@ -99,11 +77,29 @@ function handleClickListener (e) {
         const taskId=target.id;
         toggleTask(taskId);
         return;
+    }else if(target.className=='add'){
+
+        const title = addTaskInput.value;
+
+        if(!title){
+            showNotification('Task text cannot be Empty');
+            return;
+           }
+    
+        const task= {//task is an object
+           title: title,
+           id: Date.now().toString(),// Date.now() will give as a time stamp i.e. the exact time at which it was createed and we can 
+           //use it as id and the toString() will simply convert it into a string which will make the id to be a String
+           completed: false
+        }
+    
+        addTaskInput.value=''; //This will just clear the input bar the moment the user presses enter
+        addTask(task);
+
     }
 }
 
 function initializeApp(){
-    addTaskInput.addEventListener('keyup', handleInputKeyPress);
     document.addEventListener('click', handleClickListener);
 }
 
