@@ -12,7 +12,7 @@ A todo list app
 	- total items count
 - Data
 	- tasks - an array
-	- task - {done, text, id}
+	- task - {title, completed , id}
 - Functions (in code)
 	- addTodo
 	- deleteTodo
