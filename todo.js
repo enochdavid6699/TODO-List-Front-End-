@@ -33,7 +33,6 @@ function toggleTask (taskId) {
         currentTask = task[0];
         currentTask.completed=!currentTask.completed;
         renderList();
-        showNotification('Task toggled Successfully');
         return;
     }
 
@@ -56,7 +55,6 @@ function addTask (task) {
     if(task){
         tasks.push(task);
         renderList();
-        showNotification('Task Added Successfully');
         return;
     }
     showNotification('Task cannot be Added');
