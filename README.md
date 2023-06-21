@@ -6,10 +6,10 @@ A todo list app
 
 - Thinking about the UI
 - Functionality
-	- Add a TODO
+	- Add a TODO (Button as well as Enter Key)
 	- Delete a TODO
-	- check task
-	- total items count
+	- Check task
+	- Total items count
 - Data
 	- tasks - an array
 	- task - {title, completed , id}
